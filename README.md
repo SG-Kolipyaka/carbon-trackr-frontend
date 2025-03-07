@@ -15,7 +15,6 @@ CarbonTrackr is a minimal proof-of-concept web application that helps users trac
 ### Backend
 - **Node.js**
 - **Express.js**
-- **MongoDB**
 - **Google AI Studio**
 - **@google/generative-ai SDK**
 
