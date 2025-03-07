@@ -114,6 +114,10 @@ CARBON-TRACKR-BACKEND/
 ## Contributing
 Contributions are welcome! Feel free to fork the repo and submit a pull request.
 
+![Screenshot (152)](https://github.com/user-attachments/assets/dae6053d-c38b-480a-af8d-d78ec5fb947b)
+![Screenshot (153)](https://github.com/user-attachments/assets/fb5016d9-8b5d-4abb-bffc-487ffe11a1ef)
+![Screenshot (154)](https://github.com/user-attachments/assets/aa7f92ed-f981-4692-9075-5a33da44b7c7)
+
 ## License
 MIT License
 
