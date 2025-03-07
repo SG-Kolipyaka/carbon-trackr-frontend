@@ -27,7 +27,7 @@ const CarbonCalculator: React.FC = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:8080/carbon/calculate", {
+      const response = await fetch("https://carbon-trackr-backend.onrender.com/carbon/calculate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -53,7 +53,7 @@ const CarbonCalculator: React.FC = () => {
         <img 
           src="https://bnzgreen.io/_next/image?url=%2Fimages%2Flogo%2Flogo3.png&w=96&q=75" 
           alt="CarbonTrackr Logo"
-          className="w-16 h-auto" // Adjust size as needed
+          className="w-20 h-auto" // Adjust size as needed
         />
       </div>
 
