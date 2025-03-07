@@ -4,6 +4,7 @@ import CarbonHistory from "./CarbonHistory";
 
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import {API_URL} from "../lib/constants"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";  // Import Shadcn Card components
 
 interface FormData {
@@ -27,7 +28,7 @@ const CarbonCalculator: React.FC = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("https://carbon-trackr-backend.onrender.com/carbon/calculate", {
+      const response = await fetch(`${API_URL}/carbon/calculate`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
