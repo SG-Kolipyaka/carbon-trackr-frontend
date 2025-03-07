@@ -1,54 +1,74 @@
-# React + TypeScript + Vite
+# CarbonTrackr - Carbon Footprint Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+CarbonTrackr is a minimal proof-of-concept web application that helps users track and offset their carbon footprint based on their travel data. The application calculates the carbon footprint and provides AI-generated recommendations to reduce emissions.
 
-Currently, two official plugins are available:
+## Technologies Used
+- **Frontend**: React.js, TypeScript, Vite
+- **State Management**: Zustand
+- **UI Library**: Shadcn
+- **Deployment**: Vercel
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- **Carbon Footprint Calculator**: Users can input their travel details (mode, distance, fuel type, passengers) to calculate their carbon footprint.
+- **AI Recommendations**: The system generates recommendations to help users reduce their carbon emissions.
+- **Local Storage**: All calculations and recommendations are stored using Zustand for persistence.
+- **Minimal UI**: The focus is on functionality rather than aesthetics.
 
-## Expanding the ESLint configuration
+## Installation & Setup
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
+Ensure you have the following installed:
+- Node.js (>= 14.x)
+- npm or yarn
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Steps to Run Locally
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/CarbonTrackr.git
+   cd CarbonTrackr
+   ```
+2. Install dependencies:
+   ```bash
+   npm install  # or yarn install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev  # or yarn dev
+   ```
+4. Open your browser and navigate to `http://localhost:5173` (or the port Vite provides).
+
+## Deployment
+The application is deployed on Vercel. You can access it here:
+[CarbonTrackr Live](https://carbon-kh75k9q98-sgkolipyakas-projects.vercel.app/)
+
+## Folder Structure
+```
+CarbonTrackr/
+├── src/
+│   ├── components/       # Reusable components
+│   ├── pages/            # Page components
+│   ├── store/            # Zustand store for state management
+│   ├── App.tsx           # Main app component
+│   ├── main.tsx          # Entry point
+├── public/               # Static assets
+├── package.json          # Dependencies & scripts
+├── vite.config.ts        # Vite configuration
+└── README.md             # Project documentation
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Future Improvements
+- Improve UI/UX with better design elements.
+- Integrate more detailed carbon tracking data.
+- Provide real-time API-based AI recommendations.
+- Add authentication for personalized tracking.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Contributing
+Contributions are welcome! Feel free to fork the repo and submit a pull request.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## License
+MIT License
+
+---
+🚀 **Happy Tracking!**
+
