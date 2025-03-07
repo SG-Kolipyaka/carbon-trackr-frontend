@@ -4,10 +4,29 @@
 CarbonTrackr is a minimal proof-of-concept web application that helps users track and offset their carbon footprint based on their travel data. The application calculates the carbon footprint and provides AI-generated recommendations to reduce emissions.
 
 ## Technologies Used
-- **Frontend**: React.js, TypeScript, Vite
-- **State Management**: Zustand
-- **UI Library**: Shadcn
-- **Deployment**: Vercel
+
+### Frontend
+- **React.js**
+- **Zustand** (for state management)
+- **Shadcn** (for UI components)
+- **TypeScript**
+- **Vite** (for fast development)
+
+### Backend
+- **Node.js**
+- **Express.js**
+- **MongoDB**
+- **Google AI Studio**
+- **@google/generative-ai SDK**
+
+## Deployment
+
+### Frontend
+Deployed on **Vercel**: [CarbonTrackr Frontend](https://carbon-kh75k9q98-sgkolipyakas-projects.vercel.app/)
+
+### Backend
+Deployed on **Render**: [CarbonTrackr Backend](https://carbon-trackr-backend.onrender.com)
+
 
 ## Features
 - **Carbon Footprint Calculator**: Users can input their travel details (mode, distance, fuel type, passengers) to calculate their carbon footprint.
@@ -23,26 +42,45 @@ Ensure you have the following installed:
 - npm or yarn
 
 ### Steps to Run Locally
+### Frontend Setup
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/CarbonTrackr.git
-   cd CarbonTrackr
+   git clone <your-repo-url>
+   ```
+2. Navigate to the frontend folder:
+   ```bash
+   cd frontend
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+5. Open your browser and navigate to `http://localhost:5173` (or the port Vite provides).
+
+
+### Backend Setup
+1. Navigate to the backend folder:
+   ```bash
+   cd backend
    ```
 2. Install dependencies:
    ```bash
-   npm install  # or yarn install
+   npm install
    ```
-3. Start the development server:
+3. Start the backend server:
    ```bash
-   npm run dev  # or yarn dev
+   npm start
    ```
-4. Open your browser and navigate to `http://localhost:5173` (or the port Vite provides).
 
-## Deployment
+## Application Deployment
 The application is deployed on Vercel. You can access it here:
 [CarbonTrackr Live](https://carbon-kh75k9q98-sgkolipyakas-projects.vercel.app/)
 
-## Folder Structure
+## Folder Structure Frontend
 ```
 CarbonTrackr/
 ├── src/
@@ -57,11 +95,22 @@ CarbonTrackr/
 └── README.md             # Project documentation
 ```
 
-## Future Improvements
-- Improve UI/UX with better design elements.
-- Integrate more detailed carbon tracking data.
-- Provide real-time API-based AI recommendations.
-- Add authentication for personalized tracking.
+## Folder Structure Backend
+```
+CARBON-TRACKR-BACKEND/
+│-- models/
+│   ├── carbonModel.js
+│-- routes/
+│   ├── carbonRoute.js
+│-- .env
+│-- .gitignore
+│-- db.js
+│-- index.js
+│-- package-lock.json
+│-- package.json
+│-- README.md
+│-- sample.env.txt
+```
 
 ## Contributing
 Contributions are welcome! Feel free to fork the repo and submit a pull request.
